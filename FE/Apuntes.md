@@ -82,6 +82,12 @@ informació.
 - more: mostrar contingut del fitxer de forma paginada.
 - mv: moure continguts d'ubiació.
 - chmod: canviar permisos de fitxers i directoris.
+- head: mostra les primeres 10 línies del fitxer o contingut imprés.
+- tail: mostra les 10 últimes línies.
+- grep: Filtre per mostrar continguts.
+  - -v: Filtre per mostrar tot el contrari al filtre.
+- paste: copiar horitzontalment els continguts dels fitxers
+  - -d: Especifica el separador entre continguts.
   
 ## Sistema de fitxers
 - *: comodí
@@ -98,5 +104,16 @@ informació.
   u: el mismo usuario
   g: grupo de usuarios
   o: terceros
+
+## Expresiones regulares
+
+- .: Qualsevol caràcter
+- [abc]: lletra a, b, o c
+- [^abc]: qualsevol caràcter menys a,b o c
+- [a-z]: Qualsevol lletra entre la a i la z
+- ^: Començament de línia
+- $: final de línia.
+- *:0 o n repeticions del que precedeix. Ej: [abc]*a
+- 
 
 > Amb ";" es pot executar comandes diferents.
