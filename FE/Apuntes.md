@@ -1,4 +1,5 @@
-# Apuntes FE 12/09
+# Tema 1
+## Apuntes FE 12/09
 
 Estructura dels estudis universitaris
 
@@ -45,6 +46,57 @@ informació.
 - Menció en Tecnologies de la Informació
 - Menció en Sistemes d’Informació
 
+
+# Tema 2
+
 ## Linux/Unix
 
 > És un S.O lliure, multiusuari (Més d'un usuari al sistema), multiprocés (Execució de més d'un procés al sistema), fundat per Linus Torvalds al 1991.
+
+
+## Apuntes 16/09
+
+## Comandos
+
+- ls: mostrar contingut del directori
+  - ls -l: mostrar en llista
+  - ls -i: mostra l'índex del fitxer
+  - ls -a: fitxers ocults
+  - ls -s: mostrar espai ocupat
+- cd
+  - **~**: accedir al home
+- pwd
+- echo
+  - -e: Habilita les instruccions de **\\**
+  - -E: Deshabilita les instruccions de **\\**
+    - \n: Fa un salt de línia
+    - \b: backspace
+    - \c: Elimina el contingut del echo després de la seva comanda
+    - \v: vertical tab 
+    - \t: horitzontal tab
+- rmdir: elimina directori
+- mkdir: crea directori
+- cp: Copiar ficheros
+  - -r: copia recursiva
+- cat: mostrar contingut del fitxer
+- more: mostrar contingut del fitxer de forma paginada.
+- mv: moure continguts d'ubiació.
+- chmod: canviar permisos de fitxers i directoris.
+  
+## Sistema de fitxers
+- *: comodí
+- ?: un caràcter
+- [x,y,z]: qualsevol d'aquests caràcters.
+- [y-z]: Entre aquests caràcters.
+
+## Permisos dels fitxers
+  r: lectura
+  w: escritura
+  x: ejecución
+
+  a: todo el mundo
+  u: el mismo usuario
+  g: grupo de usuarios
+  o: terceros
+
+> Amb ";" es pot executar comandes diferents.
