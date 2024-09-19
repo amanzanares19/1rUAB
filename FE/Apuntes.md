@@ -55,39 +55,6 @@ informació.
 
 
 ## Apuntes 16/09
-
-## Comandos
-
-- ls: mostrar contingut del directori
-  - ls -l: mostrar en llista
-  - ls -i: mostra l'índex del fitxer
-  - ls -a: fitxers ocults
-  - ls -s: mostrar espai ocupat
-- cd
-  - **~**: accedir al home
-- pwd
-- echo
-  - -e: Habilita les instruccions de **\\**
-  - -E: Deshabilita les instruccions de **\\**
-    - \n: Fa un salt de línia
-    - \b: backspace
-    - \c: Elimina el contingut del echo després de la seva comanda
-    - \v: vertical tab 
-    - \t: horitzontal tab
-- rmdir: elimina directori
-- mkdir: crea directori
-- cp: Copiar ficheros
-  - -r: copia recursiva
-- cat: mostrar contingut del fitxer
-- more: mostrar contingut del fitxer de forma paginada.
-- mv: moure continguts d'ubiació.
-- chmod: canviar permisos de fitxers i directoris.
-- head: mostra les primeres 10 línies del fitxer o contingut imprés.
-- tail: mostra les 10 últimes línies.
-- grep: Filtre per mostrar continguts.
-  - -v: Filtre per mostrar tot el contrari al filtre.
-- paste: copiar horitzontalment els continguts dels fitxers
-  - -d: Especifica el separador entre continguts.
   
 ## Sistema de fitxers
 - *: comodí
@@ -117,3 +84,70 @@ informació.
 - 
 
 > Amb ";" es pot executar comandes diferents.
+
+
+# Apuntes 19/09
+
+> CSV: comma separated value, fitxers de text normals el contingut dels qual està disposat seguint uns criteris.
+
+_**stdin** envia a **stdout** o a **stderr**, però sempre mostra el resultat del procès per pantalla._
+
+## Redireccionament
+
+*>* machaca i *>>* afegeix les dades del fitxer.  
+*2>* manda a stderr i *&>* manda a stdout.  
+>Exemple: ls ppp 2> data: si ppp no existeix, manda l'error a data, si existeix, ho mostra per pantalla.
+
+sort << fichero  
+sort << FINAL
+aaaa
+bbb
+FINAL
+aaaa
+bbb
+Això indica que escriuràs el contingut del fitxer per entrada de teclat i terminarà d'escriure segons la paraula _FINAL_.
+
+## Pipe |
+S'utilitza per realitzar combinacions de comandes. Per exemple: ls | sort, mostra el llistat de directoris de forma ordenada.
+
+
+## Comandos
+
+- **ls**: mostrar contingut del directori
+  - ls -l: mostrar en llista
+  - ls -i: mostra l'índex del fitxer
+  - ls -a: fitxers ocults
+  - ls -s: mostrar espai ocupat
+- **cd**
+  - **~**: accedir al home
+- **pwd**
+- **echo**
+  - -e: Habilita les instruccions de **\\**
+  - -E: Deshabilita les instruccions de **\\**
+    - \n: Fa un salt de línia
+    - \b: backspace
+    - \c: Elimina el contingut del echo després de la seva comanda
+    - \v: vertical tab 
+    - \t: horitzontal tab
+- **rmdir**: elimina directori
+- **mkdir**: crea directori
+- **cp**: Copiar ficheros
+  - -r: copia recursiva
+- **cat**: mostrar contingut del fitxer
+- **more**: mostrar contingut del fitxer de forma paginada.
+- **mv**: moure continguts d'ubiació.
+- **chmod**: canviar permisos de fitxers i directoris.
+- **head**: mostra les primeres 10 línies del fitxer o contingut imprés.
+- **tail**: mostra les 10 últimes línies.
+- **grep**: Filtre per mostrar continguts.
+  - -v: Filtre per mostrar tot el contrari al filtre.
+- **paste**: copiar horitzontalment els continguts dels fitxers
+  - -d: Especifica el separador entre continguts.
+- **sort**: mostra el contingut de forma ordenada
+  - -k: ordena per clau.
+  - -t: Indica el camp separador(: per ex.)
+- **cut**: mostra per pantalla columnes del fitxer.
+  - -d: Delimitador
+  - -f: Indica els camps que retornar.
+- **cat**: Mostrar contingut del fitxer.
+- **wc**: Comptador de paraules(_-w_), lletres(_-m_), bytes(_-c_), lines(_-l_).
