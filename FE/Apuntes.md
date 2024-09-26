@@ -81,7 +81,7 @@ informació.
 - ^: Començament de línia
 - $: final de línia.
 - *:0 o n repeticions del que precedeix. Ej: [abc]*a
-- 
+  
 
 > Amb ";" es pot executar comandes diferents.
 
@@ -94,7 +94,8 @@ _**stdin** envia a **stdout** o a **stderr**, però sempre mostra el resultat de
 
 ## Redireccionament
 
-*>* machaca i *>>* afegeix les dades del fitxer.  
+**>** machaca i **>>** afegeix les dades del fitxer.  
+**>>>** guarda el resultat d'un contingut a un fitxer.  
 *2>* manda a stderr i *&>* manda a stdout.  
 >Exemple: ls ppp 2> data: si ppp no existeix, manda l'error a data, si existeix, ho mostra per pantalla.
 
@@ -110,6 +111,137 @@ Això indica que escriuràs el contingut del fitxer per entrada de teclat i term
 ## Pipe |
 S'utilitza per realitzar combinacions de comandes. Per exemple: ls | sort, mostra el llistat de directoris de forma ordenada.
 
+# Apuntes 26/09
+
+## Scripts bash
+Un **script** és un arxiu de text que conté unes comandes que s'executen línia a línia.
+Aquests fitxers poden contenir:
+- Variables.
+- Condicionals.
+- Bucles.
+- Funcions.
+- Comandes.
+
+>Per executar un script s'indica "./_ruta del fitxer_"
+
+### Variables
+- **Read var**: Guarda un valor a la variable var per text.  
+- **echo $var** per mostar el contingut de la variable.
+- **a=Hola**, guarda Hola a la variable _a_
+- **v=(un dos tres)**, guarda una llista de valors a la variable _v_
+- **a=b+1**, això t'imprimirà únicament el valor numèric.
+- **a=$a:fe**, això concatena el valors separats pel :.
+
+> Les cometes simples no fan funcionar les variables, les cometes dobles sí permeten interpretar el $.
+
+### Operacions aritmètiques
+#### Suma
+```bash
+a=10  
+a=a+1  
+echo $a (11), __També serveix__ _echo $(($a+5))_
+```
+
+##### Basic calculator (bc)
+> bc permet càlculs amb nombres reals
+```bash
+2+3
+> 5
+
+(5+1)/2
+
+z=3.1
+> 3
+
+#Utilitzant bc
+z=3.1
+bc <<< $z+4
+>7.1
+
+bc <<< "scale=2; $z/3" #Amb decimals
+```
+
+### Condicionals
+```bash
+if [ condicio ] ;
+then
+  comandes
+else
+  comandes
+fi
+
+```
+
+#### Operands:
+
+|Númerics   |   |No numèrics   |
+|---|---|---|
+|-eq   | igual a  | = |
+|-ne   | no igual a  | !=  |
+|-lt   | menor que  | <  |
+|-gt   | major que  | >  |
+|-le  |  menor o igual a  | <=  |
+|-ge   | major o igual a  | >=  |
+
+### Case
+```bash
+case <var> in
+[(] <patro1> )
+    comandes1;;
+[(] <patro2> )
+    comandes2;;
+…
+[(] <patron> )
+    comandesn;;
+esac
+
+#Ejemplo:
+case $var in
+1)
+    echo El valor es 1;;
+2)
+    echo El valor es 2;;
+3)
+    echo El valor es 3;;
+*)
+    echo No se quin valor es
+esac
+
+```
+
+### While
+```bash
+
+i=1
+while [ $i –le 10 ]
+do
+ echo El valor de i es: $i
+let i=i+1
+done
+```
+
+### Until
+```bash
+i=1
+until [ $i –eq ? ]
+do
+  echo El valor de i es: $i
+  let i=i+1
+done
+```
+> While s'utilitza mentres la condició sigui certa, l'until s'utilitza per quan la condició sigui falsa i termina quan sigui certa.
+
+### For
+```bash
+for i in 1 2 3
+do
+  echo $i
+done
+```
+### Seq
+```bash
+seq 1 10 # Mostrarà 1 2 3 4 5.. 10
+```
 
 ## Comandos
 
