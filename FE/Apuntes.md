@@ -160,6 +160,7 @@ bc <<< $z+4
 
 bc <<< "scale=2; $z/3" #Amb decimals
 ```
+> També **expr** serveix per operacions. Ex: _expr 6 + 1_ dona 7.
 
 ### Condicionals
 ```bash
@@ -243,7 +244,80 @@ done
 seq 1 10 # Mostrarà 1 2 3 4 5.. 10
 ```
 
-## Comandos
+## Apuntes 03/10
+
+### Funcions
+```bash
+
+#!/bin/bash
+
+# First example
+
+HM_funcio()
+{
+echo “Hola Mon”
+}
+HM_funcio
+
+# Second example with vars
+#!/bin/bash
+var1=“fora”
+var2=“fora”
+var_funcio(){
+  var1=“dins”
+  # Changing local variables
+  local var2=“dins”
+  # -----
+  var3=“dins”
+  echo $var1 $var2 $var3
+}
+echo $var1 $var2 # fora fora
+var_funcio # dins dins dins
+echo $var1 $var2 $var3 # dins fora dins
+
+```
+
+> **local** S'utilitza per canviar les variables únicament a dins d'una funció.
+
+#### Càlculs amb funcions i paràmetres
+```bash
+#!/bin/bash
+suma=0
+
+funcio2(){
+  suma=$(($1+$2)) # arguments de la funció
+  echo Dins: $suma
+}
+
+funcio2 2 2 # $1 $2
+echo Fora: $suma # 4
+funcio2 10 5
+echo Fora: $suma # 15
+```
+
+### Arguments
+
+```bash
+
+#!/bin/bash
+echo “Prova arguments”
+echo $1 $2 $0
+
+#Després, al shell s'ha d'executar ./nom_del_fitxer.sh arg1 arg2
+
+#!/bin/bash
+echo “Prova arguments”
+echo $1 $2
+echo $0
+echo $#
+echo $@
+
+
+```
+
+>  \$# significa la quantitat d'arguments existents. I __$@__ significa tots els arguments.
+
+## Comandes
 
 - **ls**: mostrar contingut del directori
   - ls -l: mostrar en llista
@@ -272,6 +346,7 @@ seq 1 10 # Mostrarà 1 2 3 4 5.. 10
 - **head**: mostra les primeres 10 línies del fitxer o contingut imprés.
 - **tail**: mostra les 10 últimes línies.
 - **grep**: Filtre per mostrar continguts.
+  - -i: Ingora caps.
   - -v: Filtre per mostrar tot el contrari al filtre.
 - **paste**: copiar horitzontalment els continguts dels fitxers
   - -d: Especifica el separador entre continguts.
