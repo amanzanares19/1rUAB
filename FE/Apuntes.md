@@ -316,6 +316,7 @@ echo $@
 ```
 
 >  \$# significa la quantitat d'arguments existents. I __$@__ significa tots els arguments.
+> Si el nombre d'args es > 9, s'han d'indicar entre {$12}
 
 ## Comandes
 
