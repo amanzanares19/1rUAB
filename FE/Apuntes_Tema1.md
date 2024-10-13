@@ -175,14 +175,19 @@ fi
 
 #### Operands:
 
-|Númerics   |   |No numèrics   |
-|---|---|---|
-|-eq   | igual a  | = |
-|-ne   | no igual a  | !=  |
-|-lt   | menor que  | <  |
-|-gt   | major que  | >  |
-|-le  |  menor o igual a  | <=  |
-|-ge   | major o igual a  | >=  |
+|Númerics|                 |No numèrics| File handling |
+|--------|-----------------|-----------|---------------|
+|-eq     | igual a         | =         | |
+|-ne     | no igual a      | !=        | |
+|-lt     | menor que       | <         | |
+|-gt     | major que       | >         | |
+|-le     | menor o igual a | <=        | |
+|-ge     | major o igual a | >=        | |
+|-e      |                 |           | Si el fitxer existeix |
+|-d      |                 |           | Si el valor és un directori |
+|-r      |                 |           | Si el fitxer és llegible |
+|-r      |                 |           | Si el fitxer és ordinari o especial |
+
 
 ### Case
 ```bash
