@@ -186,7 +186,7 @@ fi
 |-e      |                 |           | Si el fitxer existeix |
 |-d      |                 |           | Si el valor és un directori |
 |-r      |                 |           | Si el fitxer és llegible |
-|-r      |                 |           | Si el fitxer és ordinari o especial |
+|-f      |                 |           | Si el fitxer és ordinari o especial |
 
 
 ### Case
