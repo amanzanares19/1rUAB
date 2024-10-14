@@ -57,4 +57,7 @@
 - **git clone**: Descarrega el repositori remot a local.
     - Ex: git clone . ../fitxer
     - 
-- 
+- **git branch**: Crear altra rama del repositori. Útil per no realitzar canvis de la rama principal.
+  - -d: Elimina la branch. Ús: git branch -d _test_
+- **git merge**: Unir dues branches a una sola. Ús: git merge _branch que es vol unir_ _branch a la que s'uneix_
+- **git checkout**: Canvia de branch.
