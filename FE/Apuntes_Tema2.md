@@ -38,8 +38,15 @@
 - Staged: Està al repo local inclòs per pujar al repo remot.
 - Commited (comissio): Està preparat per afegir-se al repo remot. (Quan es fa la foto)
 
-### README
-És un fitxer documentatiu del projecte.
+
+## Github
+**GitHub** es una **plataforma de desenvolupament
+col·laboratiu** de software per allotjar projectes
+utilitzant el sistema de control de versions Git.
+
+### PAT
+El **Personal Access Token** és un mètode d'autenticació que s'utilitza per realitzar operacions amb Git mitjançant HTTPS.
+
   
 
 # Git Comands
@@ -53,7 +60,7 @@
   - -ammend: Sobreescriu el commit actual.
 - **git log**: Registre dels commits realitzats.
   - --pretty=online: simplifica la informació
-- git reset: reinicia l'estat del commit actual.
+- **git reset**: reinicia l'estat del commit actual.
 - **git clone**: Descarrega el repositori remot a local.
     - Ex: git clone . ../fitxer
     - 
@@ -61,3 +68,11 @@
   - -d: Elimina la branch. Ús: git branch -d _test_
 - **git merge**: Unir dues branches a una sola. Ús: git merge _branch que es vol unir_ _branch a la que s'uneix_
 - **git checkout**: Canvia de branch.
+- **git remote**: S'utilitza per gestionar les vinculacions dels repositoris remots amb el repositori local.  
+  - -v: Llista les urls vinculades dels repositoris remots.
+  > Exemple d'ús per vincular un repositori remot: **git remote add _namelink_ _url_**
+- **git clone**: Clonar un repositori remot a local
+- **git push**: Enviar els commits al repositori remot.
+- **git pull**: Descarrega el contingut del repositori remot i l'uneix automàticament.
+- **git fetch**: És igual que el git pull però no actualitza els canvis, és a dir, descarrega els canvis en una branca diferent. Per tant, pot requerir d'un git merge.
+- **git prune**: Elimina el contingut que no està referenciat amb el remot.
