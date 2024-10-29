@@ -175,14 +175,19 @@ fi
 
 #### Operands:
 
-|Númerics   |   |No numèrics   |
-|---|---|---|
-|-eq   | igual a  | = |
-|-ne   | no igual a  | !=  |
-|-lt   | menor que  | <  |
-|-gt   | major que  | >  |
-|-le  |  menor o igual a  | <=  |
-|-ge   | major o igual a  | >=  |
+|Númerics|                 |No numèrics| File handling |
+|--------|-----------------|-----------|---------------|
+|-eq     | igual a         | =         | |
+|-ne     | no igual a      | !=        | |
+|-lt     | menor que       | <         | |
+|-gt     | major que       | >         | |
+|-le     | menor o igual a | <=        | |
+|-ge     | major o igual a | >=        | |
+|-e      |                 |           | Si el fitxer existeix |
+|-d      |                 |           | Si el valor és un directori |
+|-r      |                 |           | Si el fitxer és llegible |
+|-f      |                 |           | Si el fitxer és ordinari o especial |
+
 
 ### Case
 ```bash
@@ -315,7 +320,76 @@ echo $@
 
 ```
 
->  \$# significa la quantitat d'arguments existents. I __$@__ significa tots els arguments.
+>  \$# significa la quantitat d'arguments existents. I __$@__ significa que retorna tots els arguments.
+> Si el nombre d'args es > 9, s'han d'indicar entre {$12}
+
+## AWK
+
+_Exemple simple_: 
+
+```bash
+# Tenim el fitxer alumnes
+Linux Bernardo 49
+WIndows Rafael 32
+Linux Carlos 21
+
+#Si executem al terminal:
+awk /Linux/ alumnes
+# Mostrara tota la fila que contingui "Linux"
+
+# Si executem:
+awk ‘$3 > 30 {print $0}’ alumnes
+#Mostra la primera col·lumna quan la columna 3 sigui més gran que 30
+
+# Si executem:
+awk ‘$2 ~ /ie/ {print $0}’ alumnes
+# Mostrarà les linies que continguin "ie" a la col·lumna 2
+awk ‘$2 !~ /ie/ {print $0}’ alumnes # Invers de l'anterior
+```
+### Comparadors
+  * '==': És igual a 
+  * '!=': No és igual a 
+  * '>=': Major o igual que
+  * '>': Major que
+  * '<=': Menor o igual que
+  * '<': Menor que
+  * '~': Conté
+  * '!~': No conté
+  
+### Operadors
+* &&: Condicional AND
+* ||: Condicional OR
+* !: Fals.
+
+> **BEGIN** S'utilitza abans d'executar l'acció. **END** S'utilitza per executar després de l'acció
+
+```bash
+# Exemple:
+awk 'BEGIN {print “Inici de awk”; print “==========“}
+    {print $2}
+    END {print “==========”}’ alumnes
+```
+
+
+!["Variables predefinidas"](./img/24_10/Variables_awk.png)
+
+#### Altre exemple
+```bash
+awk -F, '
+BEGIN { i=0 }
+{ i+=1; print i,"-",$2 }
+END { print "Total alumnes " i }
+' alumnes > output
+# Aixó imprimeix la posició de cada alumne més la col·lumna 2 i, finalment, el número total d'alumnes
+```
+
+### Variables externes dins d'awk
+```bash
+edat=33
+awk –F,'$4=='"$edat"' {print $0}' alumnes
+# Resultat: Windows,Rafael,Gordillo,33
+```
+
 
 ## Comandes
 
@@ -358,3 +432,4 @@ echo $@
   - -f: Indica els camps que retornar.
 - **cat**: Mostrar contingut del fitxer.
 - **wc**: Comptador de paraules(_-w_), lletres(_-m_), bytes(_-c_), lines(_-l_).
+- **awk**: Comanda de detecció de patrons i processament avancçat de l'entrada.
