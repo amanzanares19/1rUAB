@@ -1,7 +1,7 @@
 
-**** 10/29/24 11:57:09 *********** Evaluation PSpice (Nov 1999) **************
+**** 10/30/24 12:40:53 *********** Evaluation PSpice (Nov 1999) **************
 
- * C:\Users\Alex\Documents\1rUAB\EE\Practica3\Schematic.sch
+ * C:\Users\Alex\Documents\1rUAB\EE\Practica3\ejercicio3\Schematic.sch
 
 
  ****     CIRCUIT DESCRIPTION
@@ -13,14 +13,12 @@
 
 
 * Schematics Version 9.1 - Web Update 1
-* Tue Oct 29 11:57:06 2024
+* Wed Oct 30 12:17:06 2024
 
 
-.PARAM         x=10k 
 
 ** Analysis setup **
-.tran 0s 10s
-.STEP LIN TEMP 0 10 1 
+.tran 0m 3m
 .OP 
 
 
@@ -34,10 +32,10 @@
 
 
 
-R_R2         0 Vo  {x}  
-R_R1         $N_0001 Vo  10k  
 V_V1         $N_0001 0  
 +SIN 0 10 10k 0 0 0
+R_R1         $N_0001 A  10k  
+R_R2         0 A  100k  
 
 **** RESUMING Schematic.cir ****
 .INC "Schematic.als"
@@ -48,10 +46,11 @@ V_V1         $N_0001 0
 * Schematics Aliases *
 
 .ALIASES
-R_R2            R2(1=0 2=Vo )
-R_R1            R1(1=$N_0001 2=Vo )
 V_V1            V1(+=$N_0001 -=0 )
-_    _(Vo=Vo)
+R_R1            R1(1=$N_0001 2=A )
+R_R2            R2(1=0 2=A )
+_    _(B=0)
+_    _(A=A)
 .ENDALIASES
 
 
@@ -61,12 +60,12 @@ _    _(Vo=Vo)
 
 .END
 
-**** 10/29/24 11:57:09 *********** Evaluation PSpice (Nov 1999) **************
+**** 10/30/24 12:40:53 *********** Evaluation PSpice (Nov 1999) **************
 
- * C:\Users\Alex\Documents\1rUAB\EE\Practica3\Schematic.sch
+ * C:\Users\Alex\Documents\1rUAB\EE\Practica3\ejercicio3\Schematic.sch
 
 
- ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =    0.000 DEG C
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
 
 
 ******************************************************************************
@@ -76,7 +75,7 @@ _    _(Vo=Vo)
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(   Vo)    0.0000  ($N_0001)    0.0000                   
+(    A)    0.0000  ($N_0001)    0.0000                   
 
 
 
@@ -89,12 +88,12 @@ _    _(Vo=Vo)
     TOTAL POWER DISSIPATION   0.00E+00  WATTS
 
 
-**** 10/29/24 11:57:09 *********** Evaluation PSpice (Nov 1999) **************
+**** 10/30/24 12:40:53 *********** Evaluation PSpice (Nov 1999) **************
 
- * C:\Users\Alex\Documents\1rUAB\EE\Practica3\Schematic.sch
+ * C:\Users\Alex\Documents\1rUAB\EE\Practica3\ejercicio3\Schematic.sch
 
 
- ****     OPERATING POINT INFORMATION      TEMPERATURE =    0.000 DEG C
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
 
 
 ******************************************************************************
@@ -102,12 +101,12 @@ _    _(Vo=Vo)
 
 
 
-**** 10/29/24 11:57:09 *********** Evaluation PSpice (Nov 1999) **************
+**** 10/30/24 12:40:53 *********** Evaluation PSpice (Nov 1999) **************
 
- * C:\Users\Alex\Documents\1rUAB\EE\Practica3\Schematic.sch
+ * C:\Users\Alex\Documents\1rUAB\EE\Practica3\ejercicio3\Schematic.sch
 
 
- ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =    0.000 DEG C
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
 
 
 ******************************************************************************
@@ -117,76 +116,7 @@ _    _(Vo=Vo)
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(   Vo)    0.0000  ($N_0001)    0.0000                   
-
-
-
-
-    VOLTAGE SOURCE CURRENTS
-    NAME         CURRENT
-
-    V_V1         0.000E+00
-
-    TOTAL POWER DISSIPATION   0.00E+00  WATTS
-
-
-**** 10/29/24 11:57:09 *********** Evaluation PSpice (Nov 1999) **************
-
- * C:\Users\Alex\Documents\1rUAB\EE\Practica3\Schematic.sch
-
-
- ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =    1.000 DEG C
-
-
-******************************************************************************
-
-
-
- NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
-
-
-(   Vo)    0.0000  ($N_0001)    0.0000                   
-
-
-
-
-    VOLTAGE SOURCE CURRENTS
-    NAME         CURRENT
-
-    V_V1         0.000E+00
-
-    TOTAL POWER DISSIPATION   0.00E+00  WATTS
-
-
-**** 10/29/24 11:57:09 *********** Evaluation PSpice (Nov 1999) **************
-
- * C:\Users\Alex\Documents\1rUAB\EE\Practica3\Schematic.sch
-
-
- ****     OPERATING POINT INFORMATION      TEMPERATURE =    1.000 DEG C
-
-
-******************************************************************************
-
-
-
-
-**** 10/29/24 11:57:09 *********** Evaluation PSpice (Nov 1999) **************
-
- * C:\Users\Alex\Documents\1rUAB\EE\Practica3\Schematic.sch
-
-
- ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =    1.000 DEG C
-
-
-******************************************************************************
-
-
-
- NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
-
-
-(   Vo)    0.0000  ($N_0001)    0.0000                   
+(    A)    0.0000  ($N_0001)    0.0000                   
 
 
 
@@ -199,7 +129,8 @@ _    _(Vo=Vo)
     TOTAL POWER DISSIPATION   0.00E+00  WATTS
 
 
-          JOB ABORTED
 
-          TOTAL JOB TIME           57.83
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .02
 

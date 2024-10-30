@@ -1,5 +1,5 @@
-
-**** 10/29/24 12:15:23 *********** Evaluation PSpice (Nov 1999) **************
+
+**** 10/30/24 12:08:16 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\Alex\Documents\1rUAB\EE\Practica3\ejercicio4\Schematic2.sch
 
@@ -13,12 +13,12 @@
 
 
 * Schematics Version 9.1 - Web Update 1
-* Tue Oct 29 12:12:12 2024
+* Wed Oct 30 12:07:55 2024
 
 
 
 ** Analysis setup **
-.ac DEC 10 0.01 1.0K
+.ac DEC 10 0.01 10K
 .OP 
 
 
@@ -32,8 +32,8 @@
 
 
 
+V_V1         $N_0001 0 DC 0V AC 1V 
 C_C1         0 $N_0001  100n  
-V_V1         $N_0001 0 DC 0V AC 0V 
 
 **** RESUMING Schematic2.cir ****
 .INC "Schematic2.als"
@@ -44,8 +44,8 @@ V_V1         $N_0001 0 DC 0V AC 0V
 * Schematics Aliases *
 
 .ALIASES
-C_C1            C1(1=0 2=$N_0001 )
 V_V1            V1(+=$N_0001 -=0 )
+C_C1            C1(1=0 2=$N_0001 )
 .ENDALIASES
 
 
@@ -55,7 +55,7 @@ V_V1            V1(+=$N_0001 -=0 )
 
 .END
 
-**** 10/29/24 12:15:23 *********** Evaluation PSpice (Nov 1999) **************
+**** 10/30/24 12:08:16 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\Alex\Documents\1rUAB\EE\Practica3\ejercicio4\Schematic2.sch
 
@@ -83,7 +83,7 @@ V_V1            V1(+=$N_0001 -=0 )
     TOTAL POWER DISSIPATION   0.00E+00  WATTS
 
 
-**** 10/29/24 12:15:23 *********** Evaluation PSpice (Nov 1999) **************
+**** 10/30/24 12:08:16 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\Alex\Documents\1rUAB\EE\Practica3\ejercicio4\Schematic2.sch
 
@@ -96,7 +96,6 @@ V_V1            V1(+=$N_0001 -=0 )
 
 
 
-WARNING -- No AC sources -- AC Sweep ignored
 
           JOB CONCLUDED
 
