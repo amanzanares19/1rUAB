@@ -2,7 +2,7 @@
 
 
 
-R_R2         0 Vo  {x}  
-R_R1         $N_0001 Vo  10k  
-V_V1         $N_0001 0  
+V_V1         A 0  
 +SIN 0 10 10k 0 0 0
+R_R1         A B  10k  
+R_R2         0 B  100k  

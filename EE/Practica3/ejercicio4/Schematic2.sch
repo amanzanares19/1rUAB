@@ -1,12 +1,12 @@
-*version 9.1 2724664239
-u 44
-V? 4
+*version 9.1 922526316
+u 46
+V? 6
 C? 2
 ? 4
 HB? 2
 @libraries
 @analysis
-.AC 1 3 0
+.AC 0 3 0
 +0 10
 +1 0.01
 +2 1.0K
@@ -25,11 +25,11 @@ connectViaLocalLabels 0
 NoStim4ExtIFPortsWarnings 1
 AutoGenStim4ExtIFPorts 1
 @index
-pageloc 1 0 1583 
+pageloc 1 0 1651 
 @status
 n 2409 124:09:29:12:20:52;1730200852 e 
 s 0 124:09:29:12:15:23;1730200523 e 
-c 124:09:29:12:27:19;1730201239
+c 124:09:29:18:23:19;1730222599
 *page 1 0 970 720 iA
 @ports
 port 16 GND_EARTH 260 430 h
@@ -41,23 +41,25 @@ a 0 s 0:13 0 0 0 hln 100 GATE=
 a 0 a 0:13 0 0 0 hln 100 PKGREF=C1
 a 0 u 13 0 8 39 hln 100 VALUE=100n
 a 0 ap 9 0 17 32 hln 100 REFDES=C1
-part 42 VAC 260 370 h
+part 45 VAC 260 370 h
 a 0 sp 0 0 0 50 hln 100 PART=VAC
 a 0 x 0:13 0 0 0 hln 100 PKGREF=V1
 a 1 xp 9 0 20 10 hcn 100 REFDES=V1
-a 1 u 0 0 0 0 hcn 100 DC=5V
 part 1 titleblk 970 720 h
 a 1 s 13 0 350 10 hcn 100 PAGESIZE=A
 a 1 s 13 0 180 60 hcn 100 PAGETITLE=
-a 1 s 13 0 300 95 hrn 100 PAGENO=1
 a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
+a 1 s 13 0 300 95 hrn 100 PAGENO=1
 part 19 nodeMarker 350 430 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=C1:1
 a 0 a 0 0 4 22 hlb 100 LABEL=2
 part 17 nodeMarker 350 370 h
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 a 0 0 4 22 hlb 100 LABEL=1
 part 35 iMarker 350 380 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 a 0 0 6 20 hlb 100 LABEL=3
 @conn
@@ -97,10 +99,10 @@ j 350 430
 + p 19 pin1
 + w 11
 j 260 370
-+ p 42 +
++ p 45 +
 + w 5
 j 260 410
-+ p 42 -
++ p 45 -
 + w 11
 @attributes
 a 0 s 0:13 0 0 0 hln 100 PAGETITLE=
