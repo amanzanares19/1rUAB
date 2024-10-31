@@ -8,6 +8,7 @@ Estructura dels estudis universitaris
 
 ### Diferència entre Grau oficial o propi
 Simplement depèn del grau d'importància que tingui, per exemple, no és el mateix certificar un títol mitjançant l'estat espanyol que un títol que només és proporciona validesa la pròpia universitat.
+> Fent un master propi no et permet realitzar un **doctorat/tesi**, en canvi, un master oficial si.
 
 ### Tipus d'assignatures en el grau
 |||
