@@ -1,7 +1,13 @@
 
+<<<<<<< HEAD
+**** 10/29/24 18:18:25 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\alexm\Documents\1rUAB\EE\Practica3\ejercicio3\Schematic.sch
+=======
 **** 10/30/24 12:40:53 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\Alex\Documents\1rUAB\EE\Practica3\ejercicio3\Schematic.sch
+>>>>>>> 6529225b539820da9675f8e221038c252b043262
 
 
  ****     CIRCUIT DESCRIPTION
@@ -13,7 +19,11 @@
 
 
 * Schematics Version 9.1 - Web Update 1
+<<<<<<< HEAD
+* Tue Oct 29 18:18:22 2024
+=======
 * Wed Oct 30 12:17:06 2024
+>>>>>>> 6529225b539820da9675f8e221038c252b043262
 
 
 
@@ -32,10 +42,17 @@
 
 
 
+<<<<<<< HEAD
+V_V1         A 0  
++SIN 0 10 10k 0 0 0
+R_R1         A B  10k  
+R_R2         0 B  100k  
+=======
 V_V1         $N_0001 0  
 +SIN 0 10 10k 0 0 0
 R_R1         $N_0001 A  10k  
 R_R2         0 A  100k  
+>>>>>>> 6529225b539820da9675f8e221038c252b043262
 
 **** RESUMING Schematic.cir ****
 .INC "Schematic.als"
@@ -46,11 +63,19 @@ R_R2         0 A  100k
 * Schematics Aliases *
 
 .ALIASES
+<<<<<<< HEAD
+V_V1            V1(+=A -=0 )
+R_R1            R1(1=A 2=B )
+R_R2            R2(1=0 2=B )
+_    _(A=A)
+_    _(B=B)
+=======
 V_V1            V1(+=$N_0001 -=0 )
 R_R1            R1(1=$N_0001 2=A )
 R_R2            R2(1=0 2=A )
 _    _(B=0)
 _    _(A=A)
+>>>>>>> 6529225b539820da9675f8e221038c252b043262
 .ENDALIASES
 
 
@@ -60,9 +85,15 @@ _    _(A=A)
 
 .END
 
+<<<<<<< HEAD
+**** 10/29/24 18:18:25 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\alexm\Documents\1rUAB\EE\Practica3\ejercicio3\Schematic.sch
+=======
 **** 10/30/24 12:40:53 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\Alex\Documents\1rUAB\EE\Practica3\ejercicio3\Schematic.sch
+>>>>>>> 6529225b539820da9675f8e221038c252b043262
 
 
  ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
@@ -75,7 +106,11 @@ _    _(A=A)
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
+<<<<<<< HEAD
+(    A)    0.0000  (    B)    0.0000  
+=======
 (    A)    0.0000  ($N_0001)    0.0000                   
+>>>>>>> 6529225b539820da9675f8e221038c252b043262
 
 
 
@@ -88,9 +123,15 @@ _    _(A=A)
     TOTAL POWER DISSIPATION   0.00E+00  WATTS
 
 
+<<<<<<< HEAD
+**** 10/29/24 18:18:25 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\alexm\Documents\1rUAB\EE\Practica3\ejercicio3\Schematic.sch
+=======
 **** 10/30/24 12:40:53 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\Alex\Documents\1rUAB\EE\Practica3\ejercicio3\Schematic.sch
+>>>>>>> 6529225b539820da9675f8e221038c252b043262
 
 
  ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
@@ -101,9 +142,15 @@ _    _(A=A)
 
 
 
+<<<<<<< HEAD
+**** 10/29/24 18:18:25 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\alexm\Documents\1rUAB\EE\Practica3\ejercicio3\Schematic.sch
+=======
 **** 10/30/24 12:40:53 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\Alex\Documents\1rUAB\EE\Practica3\ejercicio3\Schematic.sch
+>>>>>>> 6529225b539820da9675f8e221038c252b043262
 
 
  ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
@@ -116,7 +163,11 @@ _    _(A=A)
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
+<<<<<<< HEAD
+(    A)    0.0000  (    B)    0.0000  
+=======
 (    A)    0.0000  ($N_0001)    0.0000                   
+>>>>>>> 6529225b539820da9675f8e221038c252b043262
 
 
 
@@ -132,5 +183,9 @@ _    _(A=A)
 
           JOB CONCLUDED
 
+<<<<<<< HEAD
+          TOTAL JOB TIME            0.00
+=======
           TOTAL JOB TIME             .02
+>>>>>>> 6529225b539820da9675f8e221038c252b043262
 
