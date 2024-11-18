@@ -1,0 +1,134 @@
+
+**** 11/06/24 14:10:21 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\alexm\Documents\1rUAB\EE\PracticasEE\Practica4\ej2\Schematic1.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Wed Nov 06 14:10:18 2024
+
+
+
+** Analysis setup **
+.ac DEC 101 10 100k
+.tran 0ns 1000s
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Schematic1.net"
+
+**** INCLUDING Schematic1.net ****
+* Schematics Netlist *
+
+
+
+V_V1         $N_0001 0  AC 1
++SIN 0 0 1200k 0 0 0
+C_C1         $N_0002 $N_0001  10n  
+R_R1         0 $N_0002  159154.9431  
+
+**** RESUMING Schematic1.cir ****
+.INC "Schematic1.als"
+
+
+
+**** INCLUDING Schematic1.als ****
+* Schematics Aliases *
+
+.ALIASES
+V_V1            V1(+=$N_0001 -=0 )
+C_C1            C1(1=$N_0002 2=$N_0001 )
+R_R1            R1(1=0 2=$N_0002 )
+.ENDALIASES
+
+
+**** RESUMING Schematic1.cir ****
+.probe
+
+
+.END
+
+**** 11/06/24 14:10:21 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\alexm\Documents\1rUAB\EE\PracticasEE\Practica4\ej2\Schematic1.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    0.0000                   ($N_0002)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 11/06/24 14:10:21 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\alexm\Documents\1rUAB\EE\PracticasEE\Practica4\ej2\Schematic1.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+**** 11/06/24 14:10:21 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\alexm\Documents\1rUAB\EE\PracticasEE\Practica4\ej2\Schematic1.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    0.0000                   ($N_0002)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+          JOB ABORTED
+
+          TOTAL JOB TIME          203.36
+

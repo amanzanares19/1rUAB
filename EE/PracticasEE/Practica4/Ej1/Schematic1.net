@@ -1,0 +1,8 @@
+* Schematics Netlist *
+
+
+
+R_R1         VPULSE Condensador  100  
+C_C1         0 Condensador  1n  
+V_V3         VPULSE 0  
++PULSE 0 10 100n 1n 1n 0.6u 0.9u

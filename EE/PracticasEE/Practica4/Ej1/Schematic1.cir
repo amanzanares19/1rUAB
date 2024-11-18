@@ -1,0 +1,23 @@
+* C:\Users\alexm\Documents\1rUAB\EE\PracticasEE\Practica4\Schematic1.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Tue Nov 05 18:33:04 2024
+
+
+
+** Analysis setup **
+.tran 0us 1000ns
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Schematic1.net"
+.INC "Schematic1.als"
+
+
+.probe
+
+
+.END
